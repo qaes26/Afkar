@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم أفكار | أكلات مصرية بيتية</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        egypt: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            500: '#d97706', // لون دافئ يميل للذهبي/البرتقالي
+                            600: '#b45309',
+                            800: '#78350f',
+                            900: '#451a03',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #fdf8f6;
+            color: #451a03;
+            scroll-behavior: smooth;
+        }
+
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .food-card {
+            transition: all 0.3s ease;
+        }
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(217, 119, 6, 0.15);
+            border-color: #d97706;
+        }
+    </style>
+</head>
+<body class="antialiased bg-pattern">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-egypt-100 text-egypt-600 p-2 rounded-full">
+                    <i class="fa-solid fa-fire-burner text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl text-egypt-900 leading-none">مطعم أفكار</h1>
+                    <span class="text-xs text-egypt-600">أكل مصري بيتي</span>
+                </div>
+            </div>
+            <a href="#contact" class="bg-green-500 text-white px-5 py-2 rounded-full font-bold hover:bg-green-600 transition flex items-center gap-2 text-sm shadow-md">
+                <i class="fa-brands fa-whatsapp text-lg"></i> للطلب والاستفسار
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-white">
+        <div class="max-w-5xl mx-auto px-4 py-16 sm:py-24">
+            <div class="text-center">
+                <span class="inline-block bg-egypt-100 text-egypt-800 font-bold px-4 py-1 rounded-full text-sm mb-6 border border-egypt-500/20">
+                    شباب وصبايا 🌸
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-egypt-900 mb-6 leading-tight">
+                    والدتي بتعمل أكلات مصرية <br> <span class="text-egypt-600">بيتية زاكية جدًا 😍</span>
+                </h2>
+                
+                <div class="flex flex-wrap justify-center gap-4 text-egypt-800 font-semibold mb-10 text-lg">
+                    <div class="bg-white border-2 border-egypt-100 shadow-sm px-6 py-3 rounded-2xl flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-green-500"></i>
+                        شغل نظيف وطعم بيتي ولا أزكى 😋
+                    </div>
+                    <div class="bg-white border-2 border-egypt-100 shadow-sm px-6 py-3 rounded-2xl flex items-center gap-2">
+                        <i class="fa-solid fa-tag text-egypt-500"></i>
+                        أسعار رمزية ومناسبة للجميع ✨
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <!-- قسم الأكلات المصرية -->
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <i class="fa-solid fa-bowl-food text-3xl text-egypt-600"></i>
+                    <h3 class="text-2xl font-black text-egypt-900 border-b-2 border-egypt-500 pb-1">الأكلات المصرية 🍲🥘</h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- قائمة الأكلات -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-leaf text-green-600 bg-green-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">كل أنواع المحشي</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-plate-wheat text-yellow-600 bg-yellow-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">معكرونة بالبشاميل</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-bread-slice text-orange-600 bg-orange-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">فطير مشلتت</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-bowl-rice text-egypt-600 bg-egypt-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">كشري</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-spoon text-green-700 bg-green-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">ملوخية</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-burger text-red-600 bg-red-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">حواوشي</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-jar text-orange-800 bg-orange-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">رز معمر</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-pepper-hot text-red-500 bg-red-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">طاجن بامية</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-drumstick-bite text-amber-700 bg-amber-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">كفتة</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-egypt-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-utensils text-egypt-600 bg-egypt-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">فتة مصرية</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-egypt-100/50 p-4 rounded-xl text-center border border-egypt-200">
+                    <p class="font-bold text-egypt-900">وأي أكلة مصرية ثانية حسب الطلب 🍲🥘</p>
+                </div>
+            </div>
+
+            <!-- قسم الحلويات -->
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <i class="fa-solid fa-cake-candles text-3xl text-pink-600"></i>
+                    <h3 class="text-2xl font-black text-egypt-900 border-b-2 border-pink-500 pb-1">الحلويات 👩‍🍳🍰</h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- قائمة الحلويات -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-cookie text-amber-600 bg-amber-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">سينابون</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-circle-notch text-pink-500 bg-pink-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">دونت</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-cheese text-orange-500 bg-orange-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">كنافة</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-cake text-purple-500 bg-purple-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">كيك</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-ice-cream text-red-400 bg-red-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">طبقات الجلي الباردة</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-bowl-rice text-gray-600 bg-gray-100 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">رز بحليب</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-mug-hot text-yellow-600 bg-yellow-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">مهلبية</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-cubes text-orange-400 bg-orange-50 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">بسبوسة و هريسة</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-cookie-bite text-amber-800 bg-amber-100 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">كحك العيد المصري</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 food-card flex items-center gap-3">
+                        <i class="fa-solid fa-stroopwafel text-yellow-700 bg-yellow-100 p-2 rounded-lg"></i>
+                        <span class="font-bold text-egypt-800">قراقيش مصرية</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-pink-50 p-4 rounded-xl text-center border border-pink-200">
+                    <p class="font-bold text-egypt-900">وأي نوع حلويات حسب الطلب 🤍</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Call to Action / Contact -->
+    <section id="contact" class="bg-white border-t border-egypt-100 py-16">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <div class="bg-egypt-50 rounded-3xl p-8 md:p-12 border-2 border-egypt-100 shadow-sm relative overflow-hidden">
+                <!-- Decorative Icon -->
+                <i class="fa-solid fa-heart absolute -right-6 -top-6 text-9xl text-egypt-500 opacity-5"></i>
+                <i class="fa-solid fa-utensils absolute -left-6 -bottom-6 text-9xl text-egypt-500 opacity-5"></i>
+                
+                <h2 class="text-3xl font-black text-egypt-900 mb-4 relative z-10">عجبك المنيو؟</h2>
+                <p class="text-xl text-egypt-800 mb-8 font-semibold relative z-10">
+                    اللي حاب/حابة يطلب أو يستفسر يبعتلي خاص 📩
+                </p>
+                
+                <a href="https://wa.me/1234567890" target="_blank" class="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-green-600 transition shadow-lg hover:-translate-y-1 relative z-10">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> تواصل معي للطلب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-egypt-900 text-egypt-100 py-6 text-center">
+        <p class="text-sm font-semibold">مطعم أفكار للأكل المصري &copy; 2026 - صُنع بحب 🤍</p>
+    </footer>
+
+</body>
+</html>
